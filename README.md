@@ -3,9 +3,12 @@ Este material está basado en las clases del "Minicurso: Introducción a la Teor
 DATOS
 ====
 Profesor: Juan Gutiérrez
+
 Digitalizado por:
+
 * Aldo Culquicondor
 * Jason Martínez
+
 Fecha: Febrero 2012
 
 TODO
