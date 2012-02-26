@@ -1,0 +1,32 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{amsthm}
+\usepackage{amsmath}
+ 
+\title{Introducción a la Teoría de Grafos}
+\author{Juan Gutierrez}
+\date{\today}
+
+\theoremstyle{definition}
+\newtheorem{definicion}{Definición}[section]
+
+\newcounter{teo}[section]
+\theoremstyle{plain}
+\newtheorem{teorema}[teo]{Teorema}
+\newtheorem{lema}[teo]{Lema}
+\newtheorem{corolario}[teo]{Corolario}
+\renewcommand{\theteo}{\arabic{section}.\arabic{teo}}
+
+\numberwithin{figure}{section}
+%\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+
+\newcommand{\notacion} {{\bf Notación: }}
+
+\begin{document}
+\maketitle
+
+\input{grafos1}
+\input{grafos2}
+\end{document}

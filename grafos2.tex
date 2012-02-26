@@ -1,0 +1,97 @@
+\section{Conexidad}
+
+\begin{definicion}
+\label{"grafo conexo"}
+Un grafo es conexo si $\forall x,y\in V_G$ existe al menos un camino de $x$ a $y$.
+\end{definicion}
+
+Decimos que $x$ está ligado a $y$ si existe un camino de $x$ a $y$.
+
+\begin{teorema}
+\label{teoconex}
+En un grafo $G$ conexo, se cumple:
+\begin{enumerate}
+\item $m(G)\ge n(G)-1$
+\item $\exists v \in V_G$ tal que $G-v$ es conexo.
+\end{enumerate}
+\end{teorema}
+
+\begin{proof}
+\begin{enumerate}
+\item El grafo conexo más simple es un camino de $n$ vértices, el cual tiene $n-1$ aristas.
+\item Podemos tomar cualquier vértice $v$ que sea extremo en un camino maximal del grafo.
+Por definición, todas sus aristas apuntan a otros vértices del camino, los cuales están unidos por el mismo camino, por tanto, eliminando $v$ no afectamos la conexidad de éstos.
+\end{enumerate}
+\end{proof}
+
+\begin{teorema}
+Sea $G$ un grafo $(U,W)$-bipartido, tal que $\delta(G)>k/2$ entonces $G$ es conexo. $k=max(|U|,|W|)$
+\end{teorema}
+
+%\begin{proof}
+%Demostración gráfica. Después lo hago
+%\end{proof}
+
+\begin{teorema}
+Sean $P^*$ y $Q^*$ dos caminos máximos en un grafo conexto $G$, entonces $E_{P^*} \cap E_{Q^*}\neq \emptyset$
+\end{teorema}
+
+%\begin{proof}
+%Demostración gráfica por contradicción
+%\end{proof}
+
+\begin{definicion}
+Un subgrafo conexo $H$ de un grafo $G$ es maximal (con relación a la conexidad) si no existe un subgrafo conexo $H'$ tal que $H \subset H'\subseteq G$
+\end{definicion}
+
+\begin{definicion}
+Un componente de un grafo $G$ es cualquier subgrafo maximal de $G$.
+\end{definicion}
+
+\notacion $C(G)$ es el número de componentes de $G$.
+
+\begin{teorema}
+En todo grafo $G$, se cumple que $m(G)\ge n(G)-C(G)$.
+\end{teorema}
+
+\begin{proof}
+Si $G$ es conexo, obtenemos $m(G)\ge n(G)-1$, que es el teorema \ref{teoconex}.
+
+Si $G$ no es conexo, aplicamos el teorema \ref{teoconex} en cada componente de $G$:
+$$m(G_i)\ge n(G_i)-1$$
+Aplicando sumatoria a ambos lados:
+$$\sum_i m(G_i)\ge\sum_i (n(G_i)-1)$$
+$$\sum_i m(G_i)\ge\sum_i n(G_i)-\sum_i1$$
+$$m(G)\ge n(G)-C(G)$$
+\end{proof}
+
+\subsection*{Ejercicios}
+Diseñe los siguientes algoritmos:
+\begin{enumerate}
+\item {\bf Algoritmo:} Entrada: $G$ y $v\in V_G$
+
+Salida: Componente de $G$ que contiene a $v$
+\item {\bf Algoritmo:} Entrada: $G$
+
+Salida: $C(G)$
+\end{enumerate}
+
+
+
+\section{Bicolorabilidad}
+
+\begin{definicion}
+Un grafo $G$ es bicolorable si existe una partición $(U,W)$ tal que toda arista de G tiene una punta en $U$ y la otra punta en $W$.
+\end{definicion}
+También se dice que el grafo es potencialmente bipartible.
+
+\begin{teorema}
+Un grafo es bicolorable si y sólo si no hay un circuito impar en él.
+\end{teorema}
+
+\begin{proof}
+Probaremos primero que si existe un circuito impar en el grafo, entonces éste no es bicolorable.
+Asignamos a cualquier vértice del circuito un color 1 y recorriendo el mismo en sentido antihorario intercalamos con el color 2. El último vértice en pintarse será de color 1 y, como por definición de circuito es adyancente al primero, el grafo no es bicolorable.
+
+Para probar que si un grafo es bicolorable no existe un circuito impar en él, usaremos inducción en el número de aristas.
+\end{proof}
