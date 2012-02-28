@@ -55,11 +55,11 @@ $d(v):$ número de vértices adyacentes al vértice $v$
 %Matrix de adyacencia
 
 \end{enumerate}
-\subsection{Grafos Famosos}
+\subsection{Grafos Importantes}
 \begin{enumerate}
 \item {\bf Regular:} Cuando $\delta(G)=\Delta(G)$
 \item {\bf Completo:} Donde $E_G=V_G^{(2)}$ \\
-donde: $V_G^{(2)}=\{uv/u,v \in V_G\}$ \\
+siendo: $V_G^{(2)}=\{uv|u,v \in V_G\}$ \\
 \notacion $K_n$ es un grafo completo de $n$ vértices.
 $$E_{K_n}=\frac{n(n-1)}{2}$$
 %\begin{itemize}
@@ -73,18 +73,24 @@ $$E_{K_n}=\frac{n(n-1)}{2}$$
 
 %\end{itemize}
 \item {\bf Bipartido:}
+Es un grafo $G=(U\cup W,E)$, donde $U\cap W=\phi$\\
+y $E\subseteq \{uv|u\in U, v\in W\}$. Entonces: $0\leq m(G)\leq|U||W|$.
 
 %Grafico de grafo bipartido
-
+\begin{itemize}
 \item {\bf Bipartido Completo:}
-
+Cuando $m(G)=q.p$ donde $q=|U|$ y $p=|W|$.\\
+\notacion $K_{p,q}$
 %Grafico de grafo bipar completo
 
 \item {\bf Estrella:}
+Es el grafo $K_{1,q}$
 
 %Grafico de grafo estrella
+\end{itemize}
 
 \item {\bf Grafo de las Aristas:}
+Es el grafo que se toma al considerar las aristas como nodos y se traza una arista entre ellas si tienen un vértice en común en el grafo original.
 
 %Grafico
 
