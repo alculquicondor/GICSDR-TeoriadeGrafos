@@ -1,0 +1,283 @@
+Teorema
+Para cualquier grafo G, toda arista e tiene una y solo una de las siguientes propiedades.
+
+1.e es un puente.
+2.e pertenece a un circuito.
+
+si no es puente entonces existe otro camino de u a v un circuito
+
+Que ocurre si todas las aristas son del tipo 1.
+
+Arbol: Grafo conexo donde no hay circuito(sin circuito)
+
+Proposicion: Si G es un arbol, m(G)= n(G)-1
+
+Demostracion: Por induccion en  |EG|
+
+
+Proposicion Todo arbol tiene por lo menos \Delta hojas  de grado maximo
+
+
+Arboles con por lo menos una hoja
+
+
+Conjunto Estable
+
+Dado un grafo G, un conjunto x \subseteq VG, es estable si \forall u,v \in x, uv \notin EG.
+
+
+
+
+
+Kn
+
+
+
+
+Problema 
+Hallar un conjunto estable máximo.
+
+Un conjunto x* tal que no existe conjunto estable x tal uqe |x| \textrptr |x*|
+
+Notación 
+        			x(G) = |x*|
+
+Conjunto estable maximal
+
+x' es un conjunto estable maximal si no existe conjunto estable x tal que x \supset x'.
+
+
+
+
+
+
+
+
+Teorema 
+Si x es un conjunto estable maximal entonces.
+
+				|x| \geqslant n(G)/(\Delta+1)
+
+			\Delta|x| + |x| \geqslant n(G)
+			\Delta|x| \geqslant |y|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	n = |x| +|y|
+            \leqslant \sum d(V) \leqslant \Delta|x|
+
+
+
+			\sum d(V) = d(V1) + ........ +   d(Vk)
+                     \leqslant \Delta   	\leqslant \Delta	
+
+              \leqslant \Delta|x|
+
+           n \leqslant |x|(\Delta+1)
+
+           |x|\geqslant n/(\Delta+1)
+
+Corolario
+			\alpha(G) \geqslant n/(\Delta+1)
+
+	Clique
+
+	Un conjunto de x \in VG es un clique si G[x] es un grafo completo.
+	Un clique es un conjunto de vertices, dos a dos adyacentes entre sí.
+
+
+
+
+
+
+
+
+	Prob.
+	CLique de cardinalidad minima.
+
+	Notación:  W(G)
+
+
+	Prob.
+	W(G) \leqslant \Delta+1
+
+
+	Proposicion					  _
+					W(G) = \alpha(G)
+
+
+
+
+	Teorema.
+	Si x es un conjunto estable entonces |x|\leqslant m/\delta
+
+
+
+
+	m \geqslant d(x) \geqslant |x|.\delta
+
+
+	Cobertura por vértices
+
+
+
+
+
+	Problema. Encontrar una cobertura minima.
+
+	Notacion   \beta(G)
+
+	Un conjunto x \subseteq VG es una cobertura por vertices si toda arista tienen por lo menos una de sus puntas en x.
+
+	Teorema
+	En todo grafo si x \subseteq Vo es un conjunto estable, VG X es una cobertura.
+
+
+
+
+
+
+
+	Proposición
+	 				\beta(G) = n(G) - \alpha(G)
+
+Cobertura minimal
+
+
+
+
+
+
+
+Teorema
+Un grafo es bicolorable \Leftrightarrow tiene un conjunto estable que es una cobertura.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Coloración de vértices
+
+Una coloracion de vertices de un grafo Ges una colección {x1,x2,x3,.....,xk} de cojuntos estables tal que x1UX2......UXk= VG
+
+Por comodidad podemos suponer
+
+
+
+
+Problema. Encontrar una coloracion minima
+
+Notacion                 X(G): # cromático
+
+			X(circuito)= 2 o 3
+
+
+Definicion
+Una cobertura por cliques de G es cualquier particion {x1,x2,.....,xk} de VG tal que Xi es un clique.
+
+Notacion    \texttheta(G)   cobertura minima por cliques.
+
+            \texttheta(G)=X(G)
+
+
+Proposicion     X(G) \geqslant W(G): clique máximo
+
+
+Corolario 
+Si existe un clique de tamaño K y una coloracion con K colores entonces la coloración es minima y el clique es máximo.
+
+						Clique      \geqslant    Coloración
+						máximo                   minimo
+
+Proposición      X(G) \geqslant \Delta + 1   
+
+
+
+
+
+Coloración en grafos planares 
+En todo grafo planar, \delta \geqslant 5
+Si G es planar, X(G) \geqslant 5
+
+Si \delta(G)=4
+
+
+
+
+
+
+Si \delta(G)=5
+
+
+
+
+
+
+
+
+   X(circuito)= 2 o 3
+
+Definición Una cobertura por cliques de G es cualquier partición {x1,......,xk} de VG tal que Xi es un clique.
+
+
+
+Notación     \texttheta(G) cobertura minima por cliques
+
+             \texttheta(G) = X(G)
+
+
+Conexidad 
+
+
+
+
+
+Camino disjunto: camino sin aristas en común.
+
+
+
+		Camino que liga r a s.
+		Corte que separa r de s (no vacio)
+
+Proposicion
+Si existen K caminos disjuntos entre r y s, entonces |\partial(x)| \geqslant k para todo corte que separa r de s.
+
+
+
+
+
+
+
+
+
+
+
+
+caminos  \leqslant  corte
+
+
+Proposición. Si |\partial(x)| \geqslant k para todo corte \partial(x) que separa r de s, existe un flujo de tamaño k.
+
+flujo: coloración de camino disjunto
+
+Teorema 
+En todo grafo, la cardinalidad de un corte mínimo que separa r de s es igual a la cardinalidad de un flujo máximo que liga r a s.
